@@ -469,20 +469,6 @@ button[onclick^="updateQuantity"]:hover {
 
 
 
-const menu = document.querySelector('#mobile-menu');
-const menuLinks = document.querySelector('.nav-links');
-
-if (menu) {
-    menu.addEventListener('click', function() {
-        // Thêm hoặc xóa class 'active' khi bấm
-        menuLinks.classList.toggle('active');
-        
-        // Hiệu ứng xoay nút 3 gạch (tùy chọn)
-        menu.classList.toggle('is-active');
-    });
-}
-
-
 
 
 
