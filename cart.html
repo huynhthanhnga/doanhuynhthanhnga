@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cart</title>
+</head>
+
+<body>
+
+<h2>Giỏ hàng</h2>
+
+<div id="cart-container"></div>
+<h3 id="total"></h3>
+
+<a href="index.html">← Back</a>
+<div id="payment-modal" class="modal">
+    <div class="modal-content payment-content">
+        <span class="close" onclick="closePayment()">&times;</span>
+        <h3>Thanh toán chuyển khoản</h3>
+        <p>Chủ TK: <b>KIEU NGUYEN HUNG</b></p>
+        <p>STK: 3386 5178 888 (TPBank)</p>
+        <img src="stk.jpg" alt="Mã QR" class="qr-code">
+        <p style="font-style: italic;">Vui lòng quét mã để hoàn tất đơn hàng</p>
+    </div>
+</div>
+
+<script src="data.js"></script>
+<script src="cart.js"></script>
+
+</body>
+</html>

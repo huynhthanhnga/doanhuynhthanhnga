@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Đăng nhập</title>
+
+<style>
+body{
+    font-family:Arial;
+    background:#0a74da;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.box{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    width:300px;
+    text-align:center;
+}
+
+input{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+}
+
+button{
+    width:100%;
+    padding:10px;
+    margin-top:10px;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+    <h2>Đăng nhập</h2>
+
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="pass" placeholder="Mật khẩu">
+
+    <button onclick="register()">Đăng ký</button>
+    <button onclick="login()">Đăng nhập</button>
+
+    <p><a href="index.html">← Trang chủ</a></p>
+</div>
+
+<script>
+
+/* LẤY USER */
+function getUsers(){
+    return JSON.parse(localStorage.getItem("users")) || [];
+}
+
+/* LƯU USER */
+function saveUsers(users){
+    localStorage.setItem("users", JSON.stringify(users));
+}
+
+/* CHECK EMAIL */
+function checkEmail(email){
+    return email.includes("@") && email.includes(".");
+}
+
+/* ĐĂNG KÝ */
+function register(){
+    let email = document.getElementById("email").value.trim();
+    let pass = document.getElementById("pass").value.trim();
+
+    if(email === "" || pass === ""){
+        alert("Nhập đầy đủ!");
+        return;
+    }
+
+    if(!checkEmail(email)){
+        alert("Email không hợp lệ!");
+        return;
+    }
+
+    if(pass.length < 6){
+        alert("Mật khẩu tối thiểu 6 ký tự!");
+        return;
+    }
+
+    let users = getUsers();
+
+    let exist = users.find(u => u.email === email);
+    if(exist){
+        alert("Email đã tồn tại!");
+        return;
+    }
+
+    users.push({email, pass});
+    saveUsers(users);
+
+    alert("Đăng ký thành công!");
+}
+
+/* ĐĂNG NHẬP */
+function login(){
+    let email = document.getElementById("email").value.trim();
+    let pass = document.getElementById("pass").value.trim();
+
+    if(email === "" || pass === ""){
+        alert("Nhập đầy đủ!");
+        return;
+    }
+
+    let users = getUsers();
+
+    let user = users.find(u => u.email === email && u.pass === pass);
+
+    if(user){
+        localStorage.setItem("login","true");
+        localStorage.setItem("currentUser", email);
+
+        alert("Đăng nhập thành công!");
+
+        // CHUYỂN TRANG CHẮC CHẮN
+        window.location.href = "index.html";
+
+    }else{
+        alert("Sai tài khoản hoặc mật khẩu!");
+    }
+}
+
+</script>
+
+</body>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiều Hưng Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>📱 Kiều Hưng Store</h1>
+    <nav>
+        <a href="index.html">Trang chủ</a>
+        <a href="cart.html">🛒 (<span id="cart-count">0</span>)</a>
+        <a href="login.html" id="user-area">Đăng nhập</a>
+    </nav>
+</header>
+
+<div class="search-box">
+    <input type="text" id="search" placeholder="🔍 Tìm điện thoại...">
+</div>
+
+<div id="product-list" class="grid"></div>
+
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">×</span>
+
+        <img id="main-img" class="main-img">
+        <div id="sub-imgs"></div>
+
+        <h2 id="modal-name"></h2>
+        <p id="modal-price"></p>
+        <p id="modal-stock"></p>
+
+        <div class="btn-group">
+            <button onclick="addToCartModal()">🛒 Thêm vào giỏ</button>
+            <button onclick="buyNow()">⚡ Mua ngay</button>
+            <div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+
+        <img id="main-img" class="main-img">
+        <div id="sub-imgs"></div>
+
+        <h2 id="modal-name"></h2>
+        <p id="modal-price"></p>
+        <p id="modal-stock"></p>
+
+        <div class="btn-group">
+            <button onclick="addToCartModal()">🛒 Thêm vào giỏ</button>
+            <button onclick="buyNow()">⚡ Mua ngay</button>
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+</div>
+<div class="card-designer">
+    <div class="card-content">
+        <div class="designer-photo">
+            <img src="ảnh của tui.jpg" alt="Ảnh chân dung người thiết kế" width="200">
+        </div>
+
+        <div class="designer-info">
+            <h2>Người Thiết Kế Web</h2>
+            <p><strong>Họ và tên:</strong> [KIỀU NGUYỄN HƯNG]</p>
+            <p><strong>Zalo:</strong> [0364282214]
+            <p><strong>Email:</strong> [kieunguyenhung97@gmail.com]
+        </div>
+    </div>
+</div>
+
+<div class="home-button-container">
+    <a href="index.html" class="btn-home">Quay về Trang chủ</a>
+</div>
+<footer class="footer-container">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Thông tin</h3>
+            <p><strong>Địa chỉ:</strong> 79 ĐT743, Bình Hoà, Thuận An, Bình Dương</p>
+            <p><strong>Email:</strong> truongtccnbd@gmail.com</p>
+            <p><strong>Hotline:</strong></p>
+            <p>0935.656.603 (Thầy Quý)</p>
+            <p>0986.265.679 (Thầy Hùng)</p>
+            
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.47492928503!2d106.7198751!3d10.8514339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752796e6a17b73%3A0x6295304918e9f564!2zVHLGsOG7nW5nIFRydW5nIGPhuqVwIEPDtG5nIG5naGnhu4dwIELDrG5oIETGsMahbmc!5e0!3m2!1svi!2s!4v1711680000000" 
+                    width="100%" height="150" style="border:0; border-radius: 8px; margin-top: 10px;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h3>Liên hệ với chúng tôi</h3>
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/hung.kn.33" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" width="20"> Facebook</a>
+                </li>
+                <li><a href="#">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" width="20"> Zalo</a>
+                </li>
+                <li><a href="https://youtube.com" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" width="20"> Youtube</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Về chúng tôi</h3>
+            <div class="video-container">
+                <iframe width="100%" height="180" src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                    title="YouTube video player" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    style="border-radius: 8px;" allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="data.js"></script> 
+<script src="auth.js"></script>
+<script src="cart.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>
