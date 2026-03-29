@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Thông Tin Đơn Hàng - VN Travel</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .order-container { max-width: 600px; margin: 50px auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px; }
+        .order-header { text-align: center; border-bottom: 2px solid #ff4d4d; padding-bottom: 10px; }
+        .order-item { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px inset #eee; }
+        .total-section { font-size: 1.2em; font-weight: bold; color: #ff4d4d; text-align: right; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="order-container">
+        <div class="order-header">
+            <h2>HÓA ĐƠN ĐẶT TOUR</h2>
+            <p>Mã đơn hàng: <span id="order-id" style="font-weight: bold; color: blue;"></span></p>
+            <p>Ngày đặt: <span id="order-date"></span></p>
+        </div>
+
+        <div id="order-items-list">
+            </div>
+
+        <div class="total-section">
+            Tổng thanh toán: <span id="order-total"></span>đ
+        </div>
+
+        <div style="margin-top: 30px; text-align: center;">
+            <a href="index.html" class="book-btn" style="text-decoration: none; background: #333; color: white; padding: 10px 20px; border-radius: 5px;">Quay về trang chủ</a>
+        </div>
+    </div>
+
+    <script src="donhang.js"></script>
+</body>
+</html>

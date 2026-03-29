@@ -7,12 +7,7 @@
 
 
     
-    <style>
-        .cart-page { padding: 50px 10%; }
-        .cart-item { display: flex; justify-content: space-between; padding: 20px; border-bottom: 1px solid #ddd; background: #fff; margin-bottom: 10px; border-radius: 8px; }
-        .empty-cart { text-align: center; padding: 100px; }
-        .btn-checkout { background: #ff4d4d; color: white; padding: 15px 30px; border: none; border-radius: 25px; cursor: pointer; float: right; margin-top: 20px; }
-    </style>
+    
 </head>
 <body>
     <div class="cart-page">
@@ -22,11 +17,65 @@
     
     <div id="cart-summary" style="text-align: right; margin-top: 20px;"></div>
     
-    <div style="display: flex; justify-content: space-between; margin-top: 30px;">
-        <a href="index.html" class="book-btn">Tiếp tục chọn tour</a>
-        <button class="cta-btn" onclick="alert('Cảm ơn bạn đã đặt hàng!')">Thanh toán ngay</button>
+    
+
+
+     
+
+<div>
+    <a href="index.html" class="book-btn">Tiếp tục chọn tour</a>
+    <button id="clear-cart" class="book-btn" style="background-color: #666; color: white; border: none; margin: 0 10px;">Xóa tất cả</button>
+    
+    <button class="cta-btn" onclick="alert('Cảm ơn bạn đã đặt hàng!')">Thanh toán ngay</button>
+</div>
+
+
+
+
+
+   <!-- phần thông tin ở chân trang -->
+
+    <footer id="footer" class="main-footer">
+    <div class="footer-container">
+        <div class="footer-col">
+            <div class="logo">VN<span>Travel</span></div>
+            <p>Tự hào là đơn vị cung cấp những hành trình khám phá Việt Nam kỳ thú và an toàn nhất.</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Liên Kết</h4>
+            <ul>
+                <li><a href="#home">Trang Chủ</a></li>
+                <li><a href="#destinations">Địa Điểm</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Liên Hệ</h4>
+            <ul>
+                <li>📍 Huỳnh Thanh Ngà</li>
+                <li>📞 0789 621 609</li>
+                <li>Sinh Viên trường Trung Cấp Công Cấp Công Nghiệp Bình Dương</li>
+                <a href=" https://www.facebook.com/bdi.edu.vn" target="_blank">Về Trường</a>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+    <h4>Bản đồ</h4>
+    <div class="map-container">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3135.787310315831!2d106.73972207962079!3d10.900015673864315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174d83c1116183d%3A0xfa754495eeb43247!2zVHLGsOG7nW5nIFRydW5nIEPhuqVwIEPDtG5nIE5naGnhu4dwIELDrG5oIETGsMahbmc!5e1!3m2!1svi!2s!4v1774438540111!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>" 
+
+        </iframe>
     </div>
 </div>
+
+        
+</footer>
+
+
+
+
 
 <script src="giohang.js"></script>
     <script src="giohang.js"> </script>

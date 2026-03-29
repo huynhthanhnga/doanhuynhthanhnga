@@ -17,18 +17,19 @@
             <li><a href="index.html">Trang Chủ</a></li>
             <li><a href="index.html#destinations">Địa Điểm</a></li>
             <li><a href="giohang.html" class="btn-contact">Giỏ Hàng</a></li>
+            <li><a href="donhang.html" class="btn-order">Đơn Hàng</a></li>
         </ul>
     </nav>
 
 
 
 
+<div id="chitiet"> </div>
 
 
 
 
-
-    <main class="detail-container">
+    <main  id="chitiet"  class="detail-container">
         <section class="detail-header">
             <img src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1200" alt="Vịnh Hạ Long" class="main-img">
             <div class="info-box">
@@ -57,20 +58,26 @@
                 <h3>Đặt Tour Ngay</h3>
                 <p class="price">Từ 2.500.000đ / khách</p>
                 <form>
+                    <p>vui lòng chọn đặt tour sau 3 ngày kể từ ngày hiện tại</p>
+                    
                     <input type="date" placeholder="Ngày đi">
+                    <p>vui lòng sửa số lượng ở trang giỏ hàng</p>
                     <input type="number" placeholder="Số người" min="1">
                     <button type="submit" class="cta-btn" style="width: 100%; border:none;">Xác nhận đặt chỗ</button>
                 </form>
             </div>
         </section>
     </main>
+    
 
 
 
 
 
-    <!-- <!-- phần thông tin ở chân trang --> -->
-    <footer class="main-footer">
+   
+       <!-- phần thông tin ở chân trang -->
+
+    <footer id="footer" class="main-footer">
     <div class="footer-container">
         <div class="footer-col">
             <div class="logo">VN<span>Travel</span></div>
@@ -82,20 +89,30 @@
             <ul>
                 <li><a href="#home">Trang Chủ</a></li>
                 <li><a href="#destinations">Địa Điểm</a></li>
-              
             </ul>
         </div>
 
         <div class="footer-col">
             <h4>Liên Hệ</h4>
             <ul>
-                <li>📍 KP2 An Phú, Thuận An, TP.HCM</li>
+                <li>📍 Huỳnh Thanh Ngà</li>
                 <li>📞 0789 621 609</li>
-                <li>✉️ info@vntravel.com</li>
+                <li>Sinh Viên trường Trung Cấp Công Cấp Công Nghiệp Bình Dương</li>
+                <a href=" https://www.facebook.com/bdi.edu.vn" target="_blank">Về Trường</a>
             </ul>
         </div>
 
-       
+        <div class="footer-col">
+    <h4>Bản đồ</h4>
+    <div class="map-container">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3135.787310315831!2d106.73972207962079!3d10.900015673864315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174d83c1116183d%3A0xfa754495eeb43247!2zVHLGsOG7nW5nIFRydW5nIEPhuqVwIEPDtG5nIE5naGnhu4dwIELDrG5oIETGsMahbmc!5e1!3m2!1svi!2s!4v1774438540111!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>" 
+
+        </iframe>
+    </div>
+</div>
+
+        
 </footer>
 
 

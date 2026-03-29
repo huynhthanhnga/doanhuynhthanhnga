@@ -369,3 +369,141 @@ footer { text-align: center; padding: 40px; background: #333; color: white; }
 
 
 
+
+
+
+
+
+
+
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Để các cột dàn hàng ngang */
+    flex-wrap: wrap; /* Tự động xuống dòng trên thiết bị di động */
+}
+
+.footer-col {
+    flex: 1; /* Chia đều không gian cho các cột */
+    min-width: 250px; /* Đảm bảo cột không quá hẹp */
+    margin: 10px;
+}
+
+.map-container iframe {
+    border-radius: 8px; /* Bo góc cho giống style các card phía trên */
+    width: 100%;
+    height: 180px; /* Điều chỉnh chiều cao phù hợp với footer */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* người sáng lập */
+.founder-info {
+    text-align: center;
+    padding: 20px;
+}
+
+.founder-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Làm ảnh hình tròn */
+    object-fit: cover;
+    border: 4px solid #ff4d4d; /* Màu đỏ chủ đạo của VNTravel */
+    margin-bottom: 15px;
+}
+
+.founder-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
+.close-founder {
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+button[onclick^="updateQuantity"] {
+    border: 1px solid #ddd;
+    background: #f9f9f9;
+    border-radius: 4px;
+    transition: 0.2s;
+}
+
+button[onclick^="updateQuantity"]:hover {
+    background: #eee;
+    color: #ff4d4d;
+}
+
+
+
+
+
+
+
+
+
+
+const menu = document.querySelector('#mobile-menu');
+const menuLinks = document.querySelector('.nav-links');
+
+if (menu) {
+    menu.addEventListener('click', function() {
+        // Thêm hoặc xóa class 'active' khi bấm
+        menuLinks.classList.toggle('active');
+        
+        // Hiệu ứng xoay nút 3 gạch (tùy chọn)
+        menu.classList.toggle('is-active');
+    });
+}
+
+
+
+
+
+/* Style cho nút Đơn Hàng trên Navbar */
+.btn-order {
+    color: #2196F3; /* Màu xanh dương để phân biệt với Giỏ Hàng màu đỏ */
+    font-weight: bold;
+    border: 1px solid #2196F3;
+    padding: 5px 15px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.btn-order:hover {
+    background-color: #2196F3;
+    color: white !important;
+}
+
+/* Đảm bảo menu mobile cũng hiển thị đẹp */
+@media screen and (max-width: 768px) {
+    .nav-links li {
+        margin: 10px 0;
+    }
+}

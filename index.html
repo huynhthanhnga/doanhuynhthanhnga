@@ -13,17 +13,29 @@
     <!-- <nav class="navbar">: Thanh điều hướng cố định (fixed). 
      Sử dụng thẻ <ul> và <li> để tạo danh sách liên kết. 
         Nút "Đăng Nhập" có class riêng để chúng ta bắt sự kiện JavaScript sau này. -->   
-    <nav class="navbar">
-        <div class="logo">VN<span>Travel</span></div>
-        <ul class="nav-links">
-            <li><a href="#home">Trang Chủ</a></li>
+
+
+
+<nav class="navbar">
+    <div class="logo"><span>VN</span>Travel</div>
+    
+    <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="#home">Trang Chủ</a></li>
             <li><a href="#destinations">Địa Điểm</a></li>
             <li><a href="#footer">Liên Hệ</a></li>
-              <li><a href="#contact" class="btn-contact">Đăng Nhập</a></li>
-        </ul>
-    </nav>
-
-
+              <li onclick="openFounder()" style="cursor:pointer">Người Sáng Lập</li>
+               <li><a href="#contact" class="btn-contact">Đăng Nhập</a></li>
+    </ul>
+</nav>
 
 
 
@@ -150,11 +162,22 @@
         <div class="footer-col">
             <h4>Liên Hệ</h4>
             <ul>
-                <li>📍 KP2 An Phú, Thuận An, TP.HCM</li>
+                <li>📍 Huỳnh Thanh Ngà</li>
                 <li>📞 0789 621 609</li>
-                <li>✉️ info@vntravel.com</li>
+                <li>Sinh Viên trường Trung Cấp Công Cấp Công Nghiệp Bình Dương</li>
+                <a href=" https://www.facebook.com/bdi.edu.vn" target="_blank">Về Trường</a>
             </ul>
         </div>
+
+        <div class="footer-col">
+    <h4>Bản đồ</h4>
+    <div class="map-container">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3135.787310315831!2d106.73972207962079!3d10.900015673864315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174d83c1116183d%3A0xfa754495eeb43247!2zVHLGsOG7nW5nIFRydW5nIEPhuqVwIEPDtG5nIE5naGnhu4dwIELDrG5oIETGsMahbmc!5e1!3m2!1svi!2s!4v1774438540111!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>" 
+
+        </iframe>
+    </div>
+</div>
 
         
 </footer>
@@ -191,7 +214,36 @@
     </div>
 </div>
 
+
+
+
+
+<!-- người sáng lập -->
+
+<div id="founderModal" class="modal">
+    <div class="modal-content">
+        <span class="close-founder">&times;</span>
+        <div class="founder-info">
+            <img src="./IMAGES/001.jpg" alt="Founder" class="founder-img">
+            <h2>Người Sáng Lập</h2>
+            <p class="founder-name">Huỳnh Thanh Ngà</p> <p>Sinh viên ngành Công nghệ thông tin</p><br>
+            <p>Tại Trường Trung Cấp Công Nghiệp Bình Dương</p><br>
+            <p>"Đam mê kết nối vẻ đẹp Việt Nam qua công nghệ."</p>
+        </div>
+    </div>
+</div>
+
+
+
    <!-- gọi scrip.js -->
     <script src="script.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+

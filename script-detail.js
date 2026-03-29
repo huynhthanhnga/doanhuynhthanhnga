@@ -4,6 +4,8 @@
 
 
 
+ 
+
 
 
 // 1. Khai báo dữ liệu các địa điểm
@@ -110,6 +112,8 @@ btnAddCart.addEventListener('click', function(e) {
     // Lấy giá tiền (loại bỏ chữ 'đ' và dấu chấm để thành số)
     const priceText = document.querySelector('.price').innerText;
     const price = parseInt(priceText.replace(/[^0-9]/g, ''));
+
+    
 
     // 2. Tạo đối tượng tour mới
     const newOrder = {
